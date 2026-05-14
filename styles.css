@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --color-background: #FFFBF5;
+  --color-foreground: #1a1a2e;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a2e;
+  --color-primary: #C5A55A;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1a1a2e;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f5f0e8;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e8e0d4;
+  --color-accent: #C5A55A;
+  --color-accent-foreground: #ffffff;
+  --color-gold: #C5A55A;
+  --color-gold-light: #f5f0e0;
+  --color-cream: #FFFBF5;
+  --color-cream-dark: #FFF7ED;
+  --color-dark: #1a1a2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.3s both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C5A55A 0%, #d4b76a 100%);
+}
+
+.step-connector {
+  position: relative;
+}
+
+.step-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  width: 24px;
+  height: 2px;
+  background-color: #C5A55A;
+  transform: translateY(-50%);
+}
