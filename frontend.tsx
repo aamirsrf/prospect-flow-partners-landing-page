@@ -267,76 +267,61 @@ function HowItWorks() {
 }
 
 function WhyChooseUs() {
-  const benefits = [
-    "Verified leads only – no spam, no tire-kickers",
-    "100% TCPA compliance and data privacy",
-    "Faster sales cycle with qualified prospects",
-    "Transparent pricing with no hidden fees",
-    "Real-time lead delivery and CRM integration",
-    "Dedicated account management and support",
-  ];
-
-  const stats = [
-    {
-      icon: <TrendingUp className="h-5 w-5 text-gold" />,
-      label: "CONVERSION RATE",
-      value: "3.2x",
-      sub: "Higher than industry average",
-    },
-    {
-      icon: <Users className="h-5 w-5 text-gold" />,
-      label: "VERIFIED CONTACTS",
-      value: "100%",
-      sub: "OTP verified for authenticity",
-    },
-    {
-      icon: <Shield className="h-5 w-5 text-gold" />,
-      label: "COMPLIANCE",
-      value: "100%",
-      sub: "TCPA and privacy compliant",
-    },
+  const rows = [
+    { feature: "Lead Exclusivity", pf: "100% Exclusive", vendor: "Shared with 3–5 buyers" },
+    { feature: "Lead Quality", pf: "Pre-qualified via quiz flow", vendor: "Generic form fills" },
+    { feature: "Delivery Speed", pf: "Real-time to CRM", vendor: "Delayed spreadsheets" },
+    { feature: "Phone Verification", pf: "OTP / PIN verified", vendor: "Unverified numbers" },
+    { feature: "Compliance", pf: "TrustedForm & Jornaya support", vendor: "Opaque sourcing" },
+    { feature: "Pricing Model", pf: "Pay per qualified lead", vendor: "Retainers & setup fees" },
   ];
 
   return (
-    <section className="py-24 bg-white" id="why-choose-us">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark leading-tight">
-              Why Insurance Agencies Choose Prospect Flow
-            </h2>
-            <div className="mt-10 space-y-5">
-              {benefits.map((b) => (
-                <div key={b} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gold mt-0.5 shrink-0" />
-                  <p className="text-muted-foreground">{b}</p>
-                </div>
+    <section className="py-48 bg-muted" id="why-choose-us">
+      <div className="max-w-3xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark">
+            Why Teams Pick{" "}
+            <span className="text-gold">Prospect Flow</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            See how we are different from old lead sellers.
+          </p>
+        </div>
+        <div className="bg-white rounded-2xl border border-border overflow-hidden">
+          <table className="w-full">
+            <thead>
+              <tr className="bg-dark text-white">
+                <th className="p-5 text-left font-semibold"></th>
+                <th className="p-5 text-center font-semibold text-gold">Prospect Flow</th>
+                <th className="p-5 text-center font-semibold">Typical Vendor</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, i) => (
+                <tr key={row.feature} className={i !== rows.length - 1 ? "border-b border-border" : ""}>
+                  <td className="py-12 px-6 font-medium text-dark">{row.feature}</td>
+                  <td className="py-12 px-6 text-center">
+                    <span className="inline-flex items-center justify-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <span className="text-gold text-sm">{row.pf}</span>
+                    </span>
+                  </td>
+                  <td className="py-12 px-6 text-center">
+                    <span className="inline-flex items-center justify-center gap-2">
+                      <XIcon className="h-4 w-4 text-gray-400 shrink-0" />
+                      <span className="text-gray-400 text-sm">{row.vendor}</span>
+                    </span>
+                  </td>
+                </tr>
               ))}
-            </div>
-          </div>
-          <div className="space-y-6">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="bg-gold-light rounded-2xl p-6 border-l-4 border-gold"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  {s.icon}
-                  <span className="text-xs font-semibold text-gold tracking-wider">
-                    {s.label}
-                  </span>
-                </div>
-                <p className="text-4xl font-bold text-dark">{s.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{s.sub}</p>
-              </div>
-            ))}
-          </div>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
   );
 }
-
 function Testimonials() {
   const reviews = [
     {
