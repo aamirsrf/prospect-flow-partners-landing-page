@@ -111,7 +111,7 @@ function Hero() {
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <a
-                href="#contact"
+                href="mailto:info@prospectflow.com"
                 className="inline-flex items-center gap-2 gold-gradient text-white font-semibold px-8 py-4 rounded-lg hover:opacity-90 transition-opacity"
               >
                 Get Your First Leads
