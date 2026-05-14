@@ -288,29 +288,29 @@ function WhyChooseUs() {
             See how we are different from old lead sellers.
           </p>
         </div>
-        <div className="bg-white rounded-2xl border border-border overflow-hidden">
-          <table className="w-full">
+        <div className="bg-white rounded-2xl border border-border overflow-x-auto">
+          <table className="w-full min-w-[500px]">
             <thead>
               <tr className="bg-dark text-white">
-                <th className="p-5 text-left font-semibold"></th>
-                <th className="p-5 text-center font-semibold text-gold">Prospect Flow</th>
-                <th className="p-5 text-center font-semibold">Typical Vendor</th>
+                <th className="p-3 md:p-5 text-left font-semibold text-sm md:text-base"></th>
+                <th className="p-3 md:p-5 text-center font-semibold text-gold text-sm md:text-base">Prospect Flow</th>
+                <th className="p-3 md:p-5 text-center font-semibold text-sm md:text-base">Typical Vendor</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={row.feature} className={i !== rows.length - 1 ? "border-b border-border" : ""}>
-                  <td className="py-12 px-6 font-medium text-dark">{row.feature}</td>
-                  <td className="py-12 px-6 text-center">
-                    <span className="inline-flex items-center justify-center gap-2">
+                  <td className="py-6 px-3 md:py-12 md:px-6 font-medium text-dark text-sm md:text-base">{row.feature}</td>
+                  <td className="py-6 px-3 md:py-12 md:px-6 text-center">
+                    <span className="inline-flex items-center justify-center gap-1 md:gap-2">
                       <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-                      <span className="text-gold text-sm">{row.pf}</span>
+                      <span className="text-gold text-xs md:text-sm">{row.pf}</span>
                     </span>
                   </td>
-                  <td className="py-12 px-6 text-center">
-                    <span className="inline-flex items-center justify-center gap-2">
+                  <td className="py-6 px-3 md:py-12 md:px-6 text-center">
+                    <span className="inline-flex items-center justify-center gap-1 md:gap-2">
                       <XIcon className="h-4 w-4 text-gray-400 shrink-0" />
-                      <span className="text-gray-400 text-sm">{row.vendor}</span>
+                      <span className="text-gray-400 text-xs md:text-sm">{row.vendor}</span>
                     </span>
                   </td>
                 </tr>
