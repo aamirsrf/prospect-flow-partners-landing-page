@@ -277,7 +277,7 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-48 bg-muted" id="why-choose-us">
+    <section className="py-24 bg-muted" id="why-choose-us">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark">
